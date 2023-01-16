@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  mysql:
+    image: mariadb:10.2
+    container_name: mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: springbootdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/db:/var/lib/mysql
